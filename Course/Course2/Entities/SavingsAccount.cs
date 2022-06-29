@@ -1,6 +1,6 @@
 ﻿namespace Course2.Entities
 {
-    class SavingsAccount : Account
+    sealed class SavingsAccount : Account
     {
         public double InterestRate { get; set; }
 
