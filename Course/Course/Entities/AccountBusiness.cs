@@ -13,7 +13,7 @@
             LoanLimit = loanLimit;
         }
 
-        public void Load(double amount)
+        public void Loan(double amount)
         {
             if (amount <= LoanLimit)
             {
