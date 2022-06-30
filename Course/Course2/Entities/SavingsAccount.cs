@@ -1,6 +1,6 @@
 ﻿namespace Course2.Entities
 {
-    sealed class SavingsAccount : Account
+    class SavingsAccount : Account
     {
         public double InterestRate { get; set; }
 
@@ -18,7 +18,7 @@
             Balance += Balance * (InterestRate / 100);
         }
 
-        public override void Withdraw(double amount) // Sobrescrever(override) o Withdraw de Acc com o de SavingsAcc
+        public sealed override void Withdraw(double amount) // Sobrescrever(override) o Withdraw de Acc com o de SavingsAcc
         {
             base.Withdraw(amount); // Pega o Withdraw da superclasse + ↓
             Balance -= 0.1; // Cobrado taxa em cima do Balance que foi pego da superclasse
